@@ -1,0 +1,30 @@
+name = "crypto-trader-saas"
+main = "src/index.js"
+# Datum bijgewerkt naar vandaag
+compatibility_date = "2025-04-29"
+
+# D1 Database configuration
+[[d1_databases]]
+binding = "DB"
+database_name = "crypto_trader_db"
+database_id = "0cfe1946-8959-40ec-8fb5-ebc917a48cf7" # Controleer of dit klopt
+
+# Environment variables
+[vars]
+ENVIRONMENT = "development"
+GEMINI_API_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-2.0:generateContent"
+
+# Optional environment-specific blocks
+[env.development]
+# vars = { ... }
+
+[env.production]
+# vars = { ... }
+
+# [[routes]] sectie is nu volledig verwijderd of becommentarieerd
+# [[routes]]
+# pattern = "/api/*"
+
+# Triggers configuration
+[triggers]
+crons = ["0 */6 * * *"]
