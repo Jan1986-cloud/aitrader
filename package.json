@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
     "deploy:worker": "wrangler deploy",
     "db:init": "wrangler d1 execute DB --local --file=migrations/0001_initial.sql",
     "db:migrate": "wrangler d1 migrations apply DB --local"
